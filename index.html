@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Geethanjali C Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* .about-mf .about-img {
+  margin-bottom: 2rem;
+} */
+
+/* .about-mf .about-img img {
+  margin-left: 10px;
+} */
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+/* Add this to your existing CSS styles */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Adjust the height as needed */
+}
+
+.about-content .heading-section {
+    text-align: left; /* Adjust the text alignment as needed */
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+}
+
+#caption {
+  text-align: center;
+}
+
+.crypto-image {
+    background-image: url('images/crypto.png');
+    background-size: cover;
+    background-position: center;
+    width: 150%;
+    height: 65%;
+}
+.resume-section {
+        text-align: center;
+    }
+.footer p {
+        font-size: 11px;
+    }
+        
+
+
+</style>
+<script src="project.js"></script>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Geethanjali C</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <!-- <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li> -->
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+	
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  
+									</div>
+									
+
+									
+									  
+								</div>
+							</div>
+						</div>
+					</div>
+					<section class="ftco-section ftco-no-pb" id="about-content">
+						<div class="container">
+							<div class="row justify-content-center pb-5">
+						  <div class="col-md-10 heading-section text-center ftco-animate">
+								
+								<h1 class="big big-2">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p class="mt-4 text-justify">Hello there! I recently graduated with a Bachelor of Engineering in Information Science, and my journey has fueled my passion for tackling intricate problems through innovative solutions. As a information science enthusiast, I delved into diverse projects, acquiring hands-on experience with various technologies and programming languages. I'm thrilled to continue my journey of learning and development as I step into the dynamic realm of the tech industry.</p>
+
+									<p class="mt-4 text-justify">Armed with a solid foundation in programming, I've utilized languages to craft and implement intricate algorithms and robust data structures, honing my problem-solving skills along the way.
+									
+									Beyond programming, I've immersed myself in the realm of web development, gaining expertise in HTML5, CSS, and JavaScript. My repertoire includes designing and constructing responsive, user-friendly websites, and I'm well-versed in the Flask web framework. Database management using MySQL is also part of my skill set.</p>
+									
+									<p class="mt-4 text-justify">My technical prowess, coupled with a fervor for creative problem-solving, positions me as a valuable team member. I have a knack for quickly adapting to new technologies, always ready to embrace fresh challenges. I'm confident that my skills and determination will drive success in the ever-evolving landscape of the tech industry.</p>
+								
+							
+
+<br>
+<br>
+						<div class="counter-wrap ftco-animate d-flex mt-md-3" id="about-content">
+							<div class="container">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="12">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/geethanjali-c/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+
+					</div>
+				
+				</div>
+			</div>
+		
+    </section>
+	
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 text-center heading-section ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>Results-driven professional seeking a challenging position with a focus on achieving operational targets and contributing to larger
+						projects. With a background in DevOps, I aim to leverage my practical knowledge and experience to make significant contributions
+						to systems and processes, solving problems, and improving overall job area effectiveness.</p>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2023-Present</span>
+						<h2>DevOps Engineer Intern</h2>
+						<span class="position">Sigmoid Analytics</span>
+						<p class="mt-4">Sigmoid is a leading data engineering services and AI consulting company that helps enterprises gain a competitive advantage with effective data-driven decision-making.
+							<ul>
+								<li>Worked with experienced DevOps engineers to assist in various tasks such as configuration management with Ansible and implementing CI/CD pipelines using Jenkins and GitHub Actions. </li>
+								<li>Gained hands-on exposure to containerization technologies like Docker and Kubernetes, helping to containerize applications and manage their deployment.</li>
+								<li>Monitored and maintained logs to contribute to setting up monitoring solutions like Prometheus and logging stacks such as ELK. </li>
+								<li>Gained expertise about security practices, documentation, and problem-solving, while continuously seeking opportunities for learning and growth in the dynamic field of DevOps.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2022-Sept 2022</span>
+						<h2>Full Stack Web Developer Intern</h2>
+						<span class="position">Sain Informatics Pvt Ltd</span>
+						<p class="mt-4"> Sain Informatics offers a broad variety of IT services to customers in various sectors. It also provides IT consulting, software and web development, digital marketing services to assist organizations in achieving their objectives. 
+							<ul>
+								<li>Assisted in building responsive & visually appealing web pages, ensuring cross-browser compatibility, and optimizing performance for a seamless user experience. </li>
+								<li>Worked with backend with Flask to build scalable & robust server-side components.This involved designing database schemas, writing APIs for CRUD operations.</li>
+								<li>Assisted in designing database schemas, writing SQL queries, & implementing data access layers to interact with databases from the backend.</li>
+								<li>Gained hands-on experience in both front & backend development, worked & contributed to development/deployment of web applications under the guidance of senior developers.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug 2019 - May 2023</span>
+						<h2>Engineering</h2>
+						<span class="position">BMSIT & M</span>
+						<p class="mt-4 text-justify">With a Bachelor’s degree in Information Science, I've developed a robust understanding of concepts such as algorithms, data structures, and neural networks. Proficient in Python and backed by hands-on projects, I've gained practical expertise. This education equips me to excel in the dynamic field of information science.</p>
+					</div>
+				</div>
+		
+				<div class="col-md-4">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2017 - May 2019</span>
+						<h2>Pre-University Course</h2>
+						<span class="position">Presidency PU College</span>
+						<p class="mt-4 text-justify">I completed my PU in PCMC, deepening my passion for science and tech which deepened my passion for these fields. It motivated me to pursue higher studies in the same domain. Throughout my PU, I engaged in practicals, projects, & extracurricular activities, enhancing my enthusiasm for science and tech.</p>
+					</div>
+				</div>
+		
+				<div class="col-md-4">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2015 - May 2017</span>
+						<h2>High School</h2>
+						<span class="position">New Millennium School</span>
+						<p class="mt-4 text-justify">Having completed my high school (ICSE), emphasizing Math, Social Sciences, and Computers. Beyond academics, I embraced sports and physical activities, cultivating a holistic learning experience. This balanced approach not only enriched my education but also instilled discipline, teamwork, and resilience, shaping me into a well-rounded individual.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+					
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/file/d/1B-ZCsyC1LOCX95_bqHsZIES-Xf4Q4tKQ/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a></p>
+			</div>
+		</div>
+		
+    	</div>
+	
+	
+	
+		<section class="ftco-section" id="project-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Projects</h1>
+						<h2 class="mb-4">Projects</h2>
+					</div>
+				</div>
+		
+				<div class="row d-flex">
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/chatbot.png');" onclick="enlargeImage('images/chatbot.png', 'AI-based chatbot to serve as a companion for individuals facing mental health challenges. It was built using NLP and Python which involved understanding user needs, preprocessing data, applying NLP for intent classification and entity recognition, managing dialog flow, generating empathetic responses, integrating external resources, thorough testing, and deployment. Popular Python libraries like NLTK, spaCy, scikit-learn, and TensorFlow aid in the development process.<br> <u>Tech Stack</u>: Python, NLTK, Machine Learning.')"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Mental Healthcare ChatBot - Website</h3>
+							</div>
+						</div>
+					</div>
+		
+					<!-- Add similar structure for other project entries -->
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/hospital.png');" onclick="enlargeImage('images/hospital.png', 'The Hospital Management System website efficiently manages patient records, tracks medical appointments, and displays practitioner availability. It offers a user-friendly interface for patients, doctors, and staff, with features for managing appointments, patient records, and practitioner profiles. Authentication ensures secure access, while integration with external systems enhances functionality. Testing and maintenance ensure reliability and performance.<br> <u> Tech-Stack:</u> HTML,CSS,JavaScript,Flask,Python,PostgreSQL.')"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Hospital Management System - Website</h3>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry">
+							<div class="block-20 zoom-effect" style="background-image: url('images/tourism.png');" onclick="enlargeImage('images/tourism.png', 'Tourism Assistance project aimed to develop a mobile application to provide comprehensive support and guidance to tourists based on their preferences and interests. The application, developed using Android Studio and Java, utilized SQLite for local data storage and XML for UI/UX design.<br> <u>Tech Stack:</u> SQLite, Android Studio, Java')"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Tourism Assistance Application - Android Application</h3>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect crypto-image" onclick="enlargeImage('images/crypto.png', 'The website serves as a platform for users to gain insights into various aspects of cryptocurrencies, such as market trends, prices, and basic concepts. In the development process, data from multiple sources is gathered and interpreted to identify trends and patterns, allowing for data-driven insights and proposals to be provided to clients.<br><u>Tech-Stack:</u> HTML, JavaScript, CSS, Python Flask.')"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Watsonisite - Website</h3>
+							</div>
+						</div>
+					</div>
+					
+		
+					<div class="col-md-4 d-flex ftco-animate">
+						<div class="blog-entry justify-content-end">
+							<div class="block-20 zoom-effect" style="background-image: url('images/car.jpeg');" onclick="enlargeImage('images/car.jpeg', 'The project involved designing a hardware system to detect accidents and promptly notify the location to an alert center via SMS. This system utilized various sensors working in coordination to detect signs of an accident.<br><u>Tech-Stack:</u> Embedded C Language')"></div>
+							<div class="text mt-3 float-right d-block">
+								<h3 class="heading">Car Accident Detection System using IoT - Hardware sensor</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<!-- Modal for Enlarged Image -->
+				<div id="enlargedImageModal" class="modal" onclick="closeModal()">
+					<span class="close">&times;</span>
+					<img class="modal-content" id="enlargedImg">
+					<div id="caption"></div>
+				</div>
+			</div>
+		</section>
+
+		<section class="ftco-section" id="project-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-5">
+					<div class="col-md-7 heading-section text-center ftco-animate">
+						<h1 class="big big-2">Skills</h1>
+						<h2 class="mb-4">Skills</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="resume-wrap ftco-animate" style="width: 90%; margin: 0 auto;">
+							<span class="date">DevOps</span>
+							<ul>
+								<li>Docker</li>
+								<li>Kubernetes</li>
+								<li>Linux</li>
+								<li>ShellScript</li>
+								<li>Helm & Helm Chart</li>
+								<li>Airflow</li>
+								<li>Azure</li>
+								<li>AWS</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="resume-wrap ftco-animate" style="width: 90%; margin: 0 auto;">
+							<span class="date">Technical</span>
+							<ul>
+								<li>Data Structures</li>
+								<li>Operating Systems</li>
+								<li>Computer Organisations</li>
+								<li>Neural Networks</li>
+								<li>Database Management</li>
+								<li>Management, Entrepreneurship for IT Industry</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="resume-wrap ftco-animate" style="width: 90%; margin: 0 auto;">
+							<span class="date">Softskills</span>
+							<ul>
+								<li>Attention to detail</li>
+								<li>Teamplayer</li>
+								<li>Highly Organised</li>
+								<li>Adaptable</li>
+								<li>Communication</li>
+								<li>Problem Solving</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="resume-wrap ftco-animate" style="width: 90%; margin: 0 auto;">
+							<span class="date">Languages</span>
+							<ul>
+								<li>Python</li>
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JavaScript</li>
+								<li>MySQL</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		
+		
+		
+
+		<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+			<div class="container">
+				<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				  <h1 class="big big-2">Get in touch</h1>
+				  <h2 class="mb-4">Get in touch</h2>
+				 
+				</div>
+			  </div>
+	  
+			  <div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+					  <p>Bengaluru, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+					  <p>7349005446</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+					  <p>geethanjali.c.official@gmail.com</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-github"></span> <!-- GitHub icon -->
+						</div>
+						<h3 class="mb-2">GitHub</h3> <!-- Reduce margin-bottom to align with the link -->
+						<p class="mb-0"><a href="https://github.com/Geethanjali0225" style="color: inherit;">github.com/Geethanjali0225</a></p> <!-- Replace your_username with your actual GitHub username -->
+					</div>
+				</div>
+			
+		</section>
+
+
+		
+		<script>
+			function enlargeImage(imageSrc, explanation) {
+				var modal = document.getElementById('enlargedImageModal');
+				var modalImg = document.getElementById("enlargedImg");
+				var captionText = document.getElementById("caption");
+				modal.style.display = "block";
+				modalImg.src = imageSrc;
+				captionText.innerHTML = explanation;
+				captionText.style.display = "block";
+				  // Show the caption when the image is clicked
+		
+				// Adjusting the size of the enlarged image for the specific project entry
+				if (imageSrc.includes('crypto.png')) { // Check if the image source is for the Watsonisite project
+					modalImg.style.maxWidth = "800px"; // Limiting the maximum width
+					modalImg.style.maxHeight = "400px"; // Limiting the maximum height
+				} else {
+					modalImg.style.maxWidth = "800px"; // Default maximum width for other project entries
+					modalImg.style.maxHeight = "400px"; // Default maximum height for other project entries
+				}
+			}
+		
+			function closeModal() {
+				var modal = document.getElementById('enlargedImageModal');
+				// Check if the clicked element is the modal content or the close button
+				if (event.target == modal || event.target.className == "close") {
+					modal.style.display = "none";
+				}
+			}
+		</script>
+		
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p class="text-center">&copy; All rights reserved | Designed by Geethanjali C</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	
+	
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
